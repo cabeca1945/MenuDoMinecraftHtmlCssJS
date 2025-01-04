@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio src="click.mp3" id="soundd"></audio>
+
+    <div id="background"></div>
+    <div id="title"></div>
+
+    <!-- <p id="titleTxt">CARALHOO</p> -->
+
+    <button id="singlePlayerBtn" onclick="clickk();">Singleplayer</button>
+    <button id="multiPlayerBtn"  onclick="clickk()">Multiplayer</button>
+    <button id="minecraftRealmsBtn" onclick="clickk()">Minecraft Realms</button>
+    <button id="optionsBtn" onclick="clickk()">Options...</button>
+    <button id="quitGameBtn" onclick="clickk()">Quit Game</button>
+
+    <p id="version">Minecraft 1.8.9</p>
+    <p id="copyright">Copyright Mojang AB. Do not distribute!</p>
+
+    
+
+    <script>
+        var soundd = document.getElementById("soundd");
+        function clickk() {
+            soundd.play();
+        }
+
+        function startGame() {
+            setInterval(() => {
+                window.location.pathname = "/minecraftMenu/src/index.html";    
+            }, 100);
+        }
+
+        var words = ["WORLDBOX!", "devine!", "KERNEL LINUX", "MENU, BOX, CREATE.", "DADADADADA", "LOLLL :)", "THIS IS MINECRAFT!", "OMG!", "BUG - 64", "BUG - 256"];
+        var wordStart = 0;
+        if((Math.random() * 256) < 8) {
+            wordStart = 12;
+        }else {
+            wordStart = Math.floor(Math.random() * words.length);
+        }
+
+        var txt = document.createElement("div");
+
+        txt.innerHTML = `<p id="titleTxt">${words[wordStart]}</p>`;
+
+        var t256Txt = "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. fuck everybody around me, except my family and who lovs me fr"; var t256Atual = ""; var t156Char = -1;
+
+        setInterval(() => {
+            
+            if(wordStart == 8) {
+                txt.style.color = "red";
+                txt.innerHTML = `<p id="titleTxt" style='color: rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})'>${words[8]}</p>`;
+                document.body.appendChild(txt);
+            }
+
+        }, 500);
+
+        setInterval(() => {
+            t156Char++;
+            t256Atual += t256Txt.charAt(t156Char);
+            if(wordStart == 12) {
+                txt.style.color = "red";
+                txt.innerHTML = `<p id="titleTxt" style='color: rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})'>${words[9] + "   " + t256Atual}</p>`;
+                document.body.appendChild(txt);
+            }
+        }, 100);
+
+	setInterval(() => {
+		if(wordStart != 12) {
+			//window.location.reload();
+		}
+	},100);
+
+        document.body.appendChild(txt);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+html {
+    overflow: hidden;
+}
+
+@keyframes backgroundRotation {
+    50% {
+        transform: rotateZ(-20deg);
+        scale: 1.15;
+    }
+    100% {
+        transform: rotateZ(20deg);
+    }
+}
+
+@keyframes titleTxtAnim {
+    50% {
+        scale: 1.2;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+button {
+    color: #f8f8f8;
+    box-shadow: #222 1px 1px 0px;
+    user-select: none;
+}
+
+button:hover {
+    border: 2px solid #ffffff;
+    color: #ffff7a;
+}
+
+#background {
+    position: absolute;
+    width: 1650px;
+    height: 1200px;
+    margin-left: -150px;
+    margin-top: -220px;
+    background-image: url("https://www.cubecraft.net/attachments/2014-11-04_20-05-52-png.26297/");
+    background-size: 1650px 1200px;
+
+    animation-name: backgroundRotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    transform: rotateZ(20deg);
+}
+
+#title {
+    position: absolute;
+    width: 600px;
+    height: 150px;
+    background-image: url("https://clipground.com/images/minecraft-java-edition-logo-6.png");
+    background-size: 600px 150px;
+    margin-left: 350px;
+    margin-top: 50px;
+    user-select: none;
+}
+#singlePlayerBtn {
+    position: absolute;
+    width: 350px;
+    height: 35px;
+    margin-left: 470px;
+    margin-top: 250px;
+    background-image: url("https://i.pinimg.com/originals/e9/90/4c/e9904cdb30314092a60f1ec18711bbbf.jpg");
+    background-size: 60px 60px;
+    font-family: "Pixelify Sans", sans-seif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: #000 2px 2px 0px;
+}
+#multiPlayerBtn {
+    position: absolute;
+    width: 350px;
+    height: 35px;
+    margin-left: 470px;
+    margin-top: 300px;
+    background-image: url("https://i.pinimg.com/originals/e9/90/4c/e9904cdb30314092a60f1ec18711bbbf.jpg");
+    background-size: 60px 60px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: #000 2px 2px 0px;
+}
+#minecraftRealmsBtn {
+    position: absolute;
+    width: 350px;
+    height: 35px;
+    margin-left: 470px;
+    margin-top: 350px;
+    background-image: url("https://i.pinimg.com/originals/e9/90/4c/e9904cdb30314092a60f1ec18711bbbf.jpg");
+    background-size: 60px 60px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: #000 2px 2px 0px;
+}
+#optionsBtn {
+    position: absolute;
+    width: 170px;
+    height: 35px;
+    margin-left: 470px;
+    margin-top: 400px;
+    background-image: url("https://i.pinimg.com/originals/e9/90/4c/e9904cdb30314092a60f1ec18711bbbf.jpg");
+    background-size: 60px 60px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: #000 2px 2px 0px;
+}
+#quitGameBtn {
+    position: absolute;
+    width: 170px;
+    height: 35px;
+    margin-left: 650px;
+    margin-top: 400px;
+    background-image: url("https://i.pinimg.com/originals/e9/90/4c/e9904cdb30314092a60f1ec18711bbbf.jpg");
+    background-size: 60px 60px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: #000 2px 2px 0px;
+}
+p {
+    position: absolute;
+    user-select: none;
+}
+#version {
+    color: #ffffff;
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    margin-top: 720px;
+    margin-left: 13px;
+}
+#copyright {
+    color: #ffffff;
+    margin-left: 970px;
+    margin-top: 720px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+}
+#titleTxt {
+    color: yellow;
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    font-size: 35px;
+    transform: rotateZ(-25deg);
+    margin-left: 750px;
+    margin-top: 110px;
+    transform-origin: center center;
+    text-shadow: #222 3px 3px 0px;
+    scale: 1;
+
+    animation-name: titleTxtAnim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+/* 
+p {
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    font-size: 100px;
+} */
